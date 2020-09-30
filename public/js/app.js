@@ -47,6 +47,7 @@ class App extends React.Component {
   const id = event.target.id
   axios.put('/songs/' + id, this.state).then(response => {
     this.setState({
+      songs: response.data,
       artist: '',
       song: '',
       rating: 0,
@@ -96,6 +97,62 @@ class App extends React.Component {
                 Rating: {song.rating}<br/>
                 <iframe src={song.iframe} width="516" height="320" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
                 Review: {song.description}<br/>
+                <details>
+                  <summary>Edit this Review</summary>
+                  <form id={song._id} onSubmit={this.updateSong}>
+                    <label htmlFor="artist">Artist</label>
+                    <br />
+                    <input
+                      type="text"
+                      id="artist"
+                      onChange={this.handleChange}
+                      value={this.state.artist}
+                    />
+                    <br />
+                    <label htmlFor="song">Song Title</label>
+                    <br />
+                    <input
+                      type="text"
+                      id="song"
+                      onChange={this.handleChange}
+                      value={this.state.song}
+                    />
+                    <br />
+                    <label htmlFor="rating">Rating</label>
+                    <br />
+                    <input
+                      type="number"
+                      min='0'
+                      max='10'
+                      id="rating"
+                      onChange={this.handleChange}
+                      value={this.state.rating}
+                    />
+                    <br />
+                    <label htmlFor="iframe">iFrame Address (Embedded SRC Code)</label>
+                    <br />
+                    <input
+                      type="text"
+                      id="iframe"
+                      onChange={this.handleChange}
+                      value={song.iframe}
+                    />
+                    <br />
+                    <label htmlFor="description">Description</label>
+                    <br />
+                    <input
+                      type="text"
+                      id="description"
+                      onChange={this.handleChange}
+                      value={this.state.description}
+                    />
+                    <br />
+                    <input type="submit" value="Update Review" /><br/>
+                    <button value={song._id} onClick={this.deleteSong}>
+                      DELETE
+                    </button>
+                  </form>
+                </details>
               </li>
             )
           })}
