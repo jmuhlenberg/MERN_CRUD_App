@@ -1,3 +1,5 @@
+body{
+background-image: linear-gradient(to right, #868f96 0%, #596164 100%);}
 h1{
   text-align: center;
   text-shadow: 1px 1px 2px darkred;
