@@ -3,12 +3,12 @@ const mongoose = require('mongoose')
 const app = express()
 require('dotenv').config()
 const PORT = process.env.PORT
-const MONGODBURI = process.env.MONGODBURI
+const MONGODB_URI = process.env.MONGODB_URI
 
 
 
 // Database
-mongoose.connect(MONGODBURI, {
+mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false
@@ -23,7 +23,7 @@ mongoose.connection.on('error', err =>
 )
 
 mongoose.connection.on('connected', () =>
-  console.log('mongo connected: ', MONGODBURI)
+  console.log('mongo connected: ', MONGODB_URI)
 )
 
 mongoose.connection.on('disconnected', () => console.log('mongo disconnected'))
