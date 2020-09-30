@@ -23,9 +23,10 @@ mongoose.connection.on('connected', () =>
 )
 mongoose.connection.on('disconnected', () => console.log('mongo disconnected'))
 
-app.get('/', (req, res) => {
-  res.send('Hello World')
-})
+
+
+const songController = require('./controllers/songs_controller.js')
+app.use('/songs', songController)
 
 app.listen(PORT, () => {
 console.log('listening to ...', PORT);
