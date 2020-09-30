@@ -1,9 +1,10 @@
 const mongoose = require('mongoose')
 
 const songSchema = new mongoose.Schema({
-  name: {type: String, require: true},
+  artist: {type: String, require: true},
+  song: {type: String, require: true},
   rating: {type: Number, require: true, min: 0, max: 10},
-  iframe: {type: String, default: '<iframe width="560" height="315" src="https://www.youtube.com/embed/AzV77KFsLn4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'},
+  iframe: {type: Object, default: "https://www.youtube.com/embed/AzV77KFsLn4"},
   description: String
 })
 
