@@ -120,7 +120,6 @@ class App extends React.Component {
   }
   render = () => {
     return(
-<<<<<<< HEAD
       <div>
         <div className='create'>
           <h2>Submit a Song Review</h2>
@@ -163,11 +162,6 @@ class App extends React.Component {
             )
           })}
         </ul>
-=======
-      <div className="container">
-        <NewSong></NewSong>
-        <Songs></Songs>
->>>>>>> 21738159f9197b3d56f88c5d033a2ec2d33e6798
       </div>
     )
   }
