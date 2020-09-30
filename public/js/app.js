@@ -135,7 +135,7 @@ class App extends React.Component {
                       type="text"
                       id="iframe"
                       onChange={this.handleChange}
-                      value={song.iframe}
+                      value={this.state.iframe}
                     />
                     <br />
                     <label htmlFor="description">Description</label>
