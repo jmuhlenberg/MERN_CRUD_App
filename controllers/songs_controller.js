@@ -1,6 +1,7 @@
 const express = require('express')
 const song = express.Router()
 const Song = require('../models/song.js')
+const songSeed = require('../models/song_seed.js')
 
 song.get('/', (req, res) => {
   Song.find({}, (err, foundSongs) => {
@@ -40,4 +41,9 @@ song.delete('/:id', (req, res) => {
   })
 })
 
+song.get('/seed', (req, res) => {
+  Song.insertMany(songSeed, (err, manySongs) => {
+    res.redirect('/')
+  })
+})
 module.exports = song
