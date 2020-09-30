@@ -114,7 +114,7 @@ class App extends React.Component {
   componentDidMount = () => {
     axios.get('/songs').then(response => {
       this.setState({
-        animals: response.data
+        songs: response.data
       })
     })
   }
