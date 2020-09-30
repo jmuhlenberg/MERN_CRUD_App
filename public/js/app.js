@@ -120,53 +120,9 @@ class App extends React.Component {
   }
   render = () => {
     return(
-<<<<<<< HEAD
       <div className="container">
         <NewSong></NewSong>
         <Songs></Songs>
-=======
-      <div>
-        <div className='create'>
-          <h2>Submit a Song Review</h2>
-          <form onSubmit={this.handleSubmit}>
-            <label htmlFor="artist">Artist*</label>
-            <br />
-            <input type="text" id="artist" onChange={this.handleChange} />
-            <br />
-            <label htmlFor="song">Song Title*</label>
-            <br />
-            <input type="text" id="song" onChange={this.handleChange} />
-            <br />
-            <label htmlFor="rating">Rating*</label>
-            <br />
-            <input type="number" id="rating" onChange={this.handleChange} />
-            <br />
-            <label htmlFor="iframe">iFrame (Embedded Code)</label>
-            <br />
-            <input type="text" id="iframe" onChange={this.handleChange} />
-            <br />
-            <label htmlFor="description">Review</label>
-            <br />
-            <input type="text" id="description" onChange={this.handleChange} />
-            <br />
-            <br />
-            <input type="submit" value="Submit Review" />
-          </form>
-        </div>
-        <ul>
-          { this.state.songs.map( song => {
-            return(
-              <li>
-                Artist: {song.artist}<br/>
-                Title: {song.song}<br/>
-                Rating: {song.rating}<br/>
-                <iframe src={song.iframe} width="516" height="320" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
-                Review: {song.description}<br/>
-              </li>
-            )
-          })}
-        </ul>
->>>>>>> ebe82c508e2e3981e63f25e99a7cd59cc744d1e4
       </div>
     )
   }
