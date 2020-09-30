@@ -16,6 +16,28 @@ song.post('/', (req, res) => {
    })
 })
 
+song.put('/:id', (req, res) => {
+  Song.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    {new: true},
+    (err, updatedSongs) => {
+      if (err) {
+        res.send(err)
+      } else {
+        Song.find({}, (err, foundSongs) => {
+          res.json(foundSongs)
+        })
+      }
+    })
+})
 
+song.delete('/:id', (req, res) => {
+  Song.findByIdAndRemove(req.params.id, (err, deletedSong) => {
+    Song.find({}, (err, foundSong) => {
+      res.json(foundSong)
+    })
+  })
+})
 
 module.exports = song
