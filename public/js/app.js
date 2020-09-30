@@ -59,35 +59,35 @@ class App extends React.Component {
 
   render = () => {
     return(
-      <div>
-        <div className='create'>
-          <h2>Submit a Song Review</h2>
-          <form onSubmit={this.handleSubmit}>
-            *Required fields<br/>
-            <label htmlFor="artist">Artist*</label>
-            <br />
-            <input type="text" id="artist" onChange={this.handleChange} />
-            <br />
-            <label htmlFor="song">Song Title*</label>
-            <br />
-            <input type="text" id="song" onChange={this.handleChange} />
-            <br />
-            <label htmlFor="rating">Rating*</label>
-            <br />
-            <input type="number" min='0' max='10' id="rating" onChange={this.handleChange} />
-            <br />
-            <label htmlFor="iframe">iFrame Address (Embedded SRC Code)</label>
-            <br />
-            <input type="text" id="iframe" onChange={this.handleChange} />
-            <br />
-            <label htmlFor="description">Review</label>
-            <br />
-            <input type="text" id="description" onChange={this.handleChange} />
-            <br />
-            <br />
-            <input type="submit" value="Submit Review" />
-          </form>
-        </div>
+      <div className="container">
+      <div className='create'>
+        <h2>Submit a Song Review</h2>
+        <form onSubmit={this.handleSubmit}>
+          *Required fields<br/>
+          <label htmlFor="artist">Artist*</label>
+          <br />
+          <input type="text" id="artist" onChange={this.handleChange} />
+          <br />
+          <label htmlFor="song">Song Title*</label>
+          <br />
+          <input type="text" id="song" onChange={this.handleChange} />
+          <br />
+          <label htmlFor="rating">Rating*</label>
+          <br />
+          <input type="number" min='0' max='10' id="rating" onChange={this.handleChange} />
+          <br />
+          <label htmlFor="iframe">iFrame Address (Embedded SRC Code)</label>
+          <br />
+          <input type="text" id="iframe" onChange={this.handleChange} />
+          <br />
+          <label htmlFor="description">Review</label>
+          <br />
+          <input type="text" id="description" onChange={this.handleChange} />
+          <br />
+          <br />
+          <input type="submit" value="Submit Review" />
+        </form>
+      </div>
         <ul>
           { this.state.songs.map( song => {
             return(
@@ -157,6 +157,7 @@ class App extends React.Component {
             )
           })}
         </ul>
+
       </div>
     )
   }
