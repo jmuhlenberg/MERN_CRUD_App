@@ -92,11 +92,11 @@ class App extends React.Component{
           { this.state.songs.map( song => {
             return(
               <li>
-                {song.artist}<br/>
-                {song.song}<br/>
-                {song.rating}<br/>
+                Artist: {song.artist}<br/>
+                Title: {song.song}<br/>
+                Rating: {song.rating}<br/>
                 <iframe src={song.iframe} width="516" height="320" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
-                {song.description}<br/>
+                Review: {song.description}<br/>
               </li>
             )
           })}
