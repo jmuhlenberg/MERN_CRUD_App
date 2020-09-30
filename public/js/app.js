@@ -64,6 +64,7 @@ class App extends React.Component{
         <div className='create'>
           <h2>Submit a Song Review</h2>
           <form onSubmit={this.handleSubmit}>
+            *Required fields
             <label htmlFor="artist">Artist*</label>
             <br />
             <input type="text" id="artist" onChange={this.handleChange} />
@@ -76,7 +77,7 @@ class App extends React.Component{
             <br />
             <input type="number" id="rating" onChange={this.handleChange} />
             <br />
-            <label htmlFor="iframe">iFrame (Embedded Code)</label>
+            <label htmlFor="iframe">iFrame Address (Embedded SRC Code)</label>
             <br />
             <input type="text" id="iframe" onChange={this.handleChange} />
             <br />
