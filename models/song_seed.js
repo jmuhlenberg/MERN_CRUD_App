@@ -13,21 +13,16 @@ module.exports = [
     rating: 10,
     iframe: '<iframe width="560" height="315" src="https://www.youtube.com/embed/per9Wz0N-QA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
     description: 'best instrumental track'
-  },
-
-  {
-    artist: '',
-    song: '',
-    rating: ,
-    iframe: '',
-    description: ''
-  },
-
-  {
-    artist: '',
-    song: '',
-    rating: ,
-    iframe: '',
-    description: ''
   }
 ]
+
+
+
+// COPY PASTE  MODEL:
+// {
+//   artist: '',
+//   song: '',
+//   rating: ,
+//   iframe: '',
+//   description: ''
+// }
