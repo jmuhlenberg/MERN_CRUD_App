@@ -95,7 +95,7 @@ class App extends React.Component {
                 <h6>Artist: {song.artist}</h6>
                 <h6>Title: {song.song}</h6>
                 <h6>Rating: {song.rating}</h6>
-                <iframe src={song.iframe} width="516" height="320" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+                <iframe src={song.iframe} width="560" height="320" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
                 <h6>Review: {song.description}</h6>
                 <details>
                   <summary>Edit this Review</summary>
