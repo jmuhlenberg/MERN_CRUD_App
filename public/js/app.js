@@ -111,6 +111,13 @@ class Songs extends React.Component {
 
 
 class App extends React.Component {
+  componentDidMount = () => {
+    axios.get('/songs').then(response => {
+      this.setState({
+        animals: response.data
+      })
+    })
+  }
   render = () => {
     return(
       <div className="container">
