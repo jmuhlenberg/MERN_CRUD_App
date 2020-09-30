@@ -1,12 +1,13 @@
 // console.log('hello');
 
-class NewSong extends React.Component{
+class App extends React.Component {
   state={
     artist: '',
     song: '',
     rating: 0,
     iframe: '',
-    description: ''
+    description: '',
+    songs: []
   }
 
   handleChange = (event) => {
@@ -23,58 +24,12 @@ class NewSong extends React.Component{
     })
   }
 
-  render = () => {
-    return(
-      <div className='create'>
-        <h2>Submit a Song Review</h2>
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="artist">Artist</label>
-          <br />
-          <input type="text" id="artist" onChange={this.handleChange} />
-          <br />
-          <label htmlFor="song">Song Title</label>
-          <br />
-          <input type="text" id="song" onChange={this.handleChange} />
-          <br />
-          <label htmlFor="rating">Rating</label>
-          <br />
-          <input type="number" id="rating" onChange={this.handleChange} />
-          <br />
-          <label htmlFor="iframe">iFrame (Embedded Code)</label>
-          <br />
-          <input type="text" id="iframe" onChange={this.handleChange} />
-          <br />
-          <label htmlFor="description">Review</label>
-          <br />
-          <input type="text" id="description" onChange={this.handleChange} />
-          <br />
-          <br />
-          <input type="submit" value="Submit Review" />
-        </form>
-      </div>
-    )
-  }
-
-}
-
-
-class Songs extends React.Component {
-  state={
-    artist: '',
-    song: '',
-    rating: 0,
-    iframe: '',
-    description: '',
-    songs: []
-  }
-
-  //songs reviewed
   componentDidMount = () => {
-  axios.get('/songs').then(response => {
-    this.setState({
-      songs: response.data
+    axios.get('/songs').then(response => {
+      this.setState({
+        songs: response.data
+      })
     })
-  })
   }
 
   //delete songs
@@ -102,29 +57,12 @@ class Songs extends React.Component {
   }
 
   render = () => {
-    return (
-      <div>
-      </div>
-    )
-  }
-}
-
-
-class App extends React.Component {
-  componentDidMount = () => {
-    axios.get('/songs').then(response => {
-      this.setState({
-        songs: response.data
-      })
-    })
-  }
-  render = () => {
     return(
       <div>
         <div className='create'>
           <h2>Submit a Song Review</h2>
           <form onSubmit={this.handleSubmit}>
-            *Required fields
+            *Required fields<br/>
             <label htmlFor="artist">Artist*</label>
             <br />
             <input type="text" id="artist" onChange={this.handleChange} />
