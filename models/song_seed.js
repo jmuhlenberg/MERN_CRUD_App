@@ -16,18 +16,29 @@ module.exports = [
   },
 
   {
-    artist: '',
-    song: '',
-    rating: ,
-    iframe: '',
-    description: '',
+    artist: 'Smashing Pumpkins',
+    song: '1979',
+    rating: 7,
+    iframe: '<iframe width="560" height="315" src="https://www.youtube.com/embed/4aeETEoNfOg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    description: 'classic rock song',
   },
 
   {
-    artist: '',
-    song: '',
-    rating: ,
-    iframe: '',
-    description: '',
-  }
+    artist: 'Night Lovell',
+    song: 'Alone',
+    rating: 8,
+    iframe: '<iframe width="560" height="315" src="https://www.youtube.com/embed/sCqz9phxFj8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    description: 'dark and deep',
+  },
 ]
+
+
+
+// COPY PASTE  MODEL:
+// {
+//   artist: '',
+//   song: '',
+//   rating: ,
+//   iframe: '',
+//   description: ''
+// }
