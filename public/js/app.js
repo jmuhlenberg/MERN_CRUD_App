@@ -74,7 +74,7 @@ class App extends React.Component {
             <br />
             <label htmlFor="rating">Rating*</label>
             <br />
-            <input type="number" id="rating" onChange={this.handleChange} />
+            <input type="number" min='0' max='10' id="rating" onChange={this.handleChange} />
             <br />
             <label htmlFor="iframe">iFrame Address (Embedded SRC Code)</label>
             <br />
@@ -92,11 +92,11 @@ class App extends React.Component {
           { this.state.songs.map( song => {
             return(
               <li>
-                Artist: {song.artist}<br/>
-                Title: {song.song}<br/>
-                Rating: {song.rating}<br/>
+                <h6>Artist: {song.artist}</h6>
+                <h6>Title: {song.song}</h6>
+                <h6>Rating: {song.rating}</h6>
                 <iframe src={song.iframe} width="516" height="320" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
-                Review: {song.description}<br/>
+                <h6>Review: {song.description}</h6>
                 <details>
                   <summary>Edit this Review</summary>
                   <form id={song._id} onSubmit={this.updateSong}>
