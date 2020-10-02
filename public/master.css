@@ -1,10 +1,12 @@
 body{
 background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
 }
+
 .container{
   display: flex;
   justify-content: space-between;
 }
+
 h1{
   background-color: #c3cfe2;
   text-align: center;
